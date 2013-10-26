@@ -1,3 +1,6 @@
+@import url('http://fonts.googleapis.com/css?family=Creepster');
+@import url('http://fonts.googleapis.com/css?family=Marvel');
+/*esto importa las fuentes desde google fonts  */
 .boton {
 	font-weight: bold;
 	background-color: #A69520;
@@ -26,12 +29,36 @@
 	background: -moz-linear-gradient(#FFF089, #A69520);
 	background: -o-linear-gradient(#FFF089, #A69520);
 	background: linear-gradient(top center, #FFF089, #A69520);
+	background-image: -ms-linear-gradient(bottom, #FFF089 0%, #A69520 81%);
 	/* END gradient */
 }
 p {
   margin: 10px 10px;
-  font-family: Arial;
-  font-size: .8em;
+  font-family: 'Marvel', sans-serif;
+  font-size: 1em;
   text-align: justify;
-  color: blue;
+  color: gray;
+}
+
+h1 {
+  margin: 10px 10px;
+  font-family: Arial;
+  font-size: 2em;
+  text-align: center;
+  color: red;
+}
+
+h2 {
+  margin: 10px 10px;
+  font-family: 'Creepster', sans-serif;  /*si no encuentra Creepster, carga sans-serif */
+  font-size: 1.2em;
+  color: black;
+  font-weight: normal;
+}
+
+h3 {
+  margin: 10px 10px;
+  font-family: Arial;
+  font-size: 1em;
+  color: green;
 }
