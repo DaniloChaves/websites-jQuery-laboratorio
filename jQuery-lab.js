@@ -1,33 +1,53 @@
-$(document).ready(function(){
-	// ----------------------------------------------
+$(document).ready(function($) {
+	//------------------------------------
 	// elementos ocultos inicialmente
 	$('#borrarDesorden').hide();
 
 	$('#probarToggle').hide();
-	// ----------------------------------------------
-	// aplicando estilo CSS desde javaScript
+	//------------------------------------
+	//aplicando css desde JS
 	$('h1').css({
 		'color': '#454657',
-		'font-size': '88px',
-		'font-family': 'Marvel', 
+		'font-size': '66px',
 	});
-	$('h2').css({
-		'color': '#e58b24',
+	$('h3').css({
+		'color': 'red',
+		'font-size': '44px',
 	});
-		$('h3').css({
-		'color': '#454657',
-	});
-	// esta es una manera lenta de hacer cambios en el css
-	// no es aconsejable que se implemente 
-
-	// aplicando clase 'colores' del documento 'boton.css'
+	// aplicando clase 'colores' del estilos.css
 	$('section').addClass('colores');
-
-	// alicando clase a 'animacion'+
+	// aplicando clase 'animacion' por CSS3 a un div con id
 	$('#animaciones').addClass('animacion');
-
-	// quitando estilos a través de jQuery
-	$('#quitarClase').click(function(event){
-		$('section').removeClass('colores').removeattr('class');
+	// Quitando estilos a traves de jQuery
+	$('#quitarClase').click(function(event) {
+		$('section').removeClass('colores').removeAttr('class');
+	});
+	// Agregando clase para el elemento que se retiro
+	$('#ponerClase').click(function(event) {
+		$('section').addClass('colores');
+	});
+	// Ocultando el mismo elemento y cambiando elementos de mi sitio
+	$('#ocultarBoton').click(function(event) {
+		$(this).hide('slow/400/fast', function() {
+			$('#quitarClase, #ponerClase, .animacion p').css({
+				'color': '#e62cd6',
+				'font-size': '22px',
+			});
+		if($('#borrarDesorden').is(':hidden')){
+			$('#borrarDesorden').show();
+		} else {
+			$('#borrarDesorden').hide();
+		}
+		});
+	});
+	// Ocultar varios elementos a partir de un elemento que estaba oculto
+	$('#borrarDesorden').click(function(event) {
+		$('#botonesParaOcultar, #animaciones').hide();
+		$(this).hide('slow/400/fast', function() {
+			$('#probarToggle').show();
+			$('<br /><div id="modificarContenido">'+
+			  '<a class="boton">Agregando elementos</a>'+
+			  '</div>').appendTo('#elementoAgregado');
+		});
 	});
 });
