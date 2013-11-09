@@ -1,0 +1,82 @@
+body{
+	font-family: Arial;
+	font-size: 14px;
+}
+
+#container{
+	margin: 0 auto;
+	max-width: 980px;
+}
+
+#container header{
+	background: #CCC;
+	border-bottom: 1px solid #444;
+	padding: 10px;
+	text-align: center;
+}
+
+#container header h1{
+	font-size: 4em;
+	margin: 0;
+}
+
+#container header p{
+	font-size: 2em;
+	margin: 0;
+}
+
+#container #content{
+	background: #aaa;
+	padding: 1em;
+}
+
+#container #content article{
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+	padding: 5px;	
+}
+
+#container footer{
+	background: #ccc;
+	padding: 10px;
+}
+
+/* Definiendo los media queries */
+@media screen and (max-width: 980px){
+	/* propiedadades para aplicar en ventanas "Normales" */
+	#container header h1{
+		font-size: 2em;
+		color: orange;
+	}	
+
+	#container header p{
+		font-size: 1em;
+		color: green;
+	}	
+}
+
+@media screen and (max-width: 650px){
+	/* propiedad CSS a aplicar de 650px o menos  */
+	#container header h1{
+		font-size: 2em;
+		color: red;
+	}	
+
+	#container header p{
+		font-size: 1em;
+		color: red;
+	}
+}
+
+@media screen and (max-width: 480px){
+	/* propiedades CSS para aplicar en ventanas de 480px o menos */
+		#container header h1{
+		font-size: 2em;
+		color: blue;
+	}	
+
+	#container header p{
+		font-size: 1.4em;
+		color: #777;
+	}
+}

@@ -1,0 +1,13 @@
+indice.php
+*.jpg
+*.png
+*.gif
+*.jpeg
+*.JPG
+*.PNG
+*.GIF
+*.JPEG
+images
+images/
+/mobiles/demos/
+/mobiles/images/
