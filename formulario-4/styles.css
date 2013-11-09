@@ -1,0 +1,22 @@
+.label{
+	float: left;
+	width: 120px;
+}
+
+.infobox {
+	width: 200px;
+	font-family: sans-serif;
+}
+
+.error {
+	color: red;
+	padding-left: 10px;
+	font-family: sans-serif;
+}
+
+.submit{
+	margin-left: 125px;
+	margin-top: 10px;
+	cursor: pointer;
+	font-family: sans-serif;
+}
